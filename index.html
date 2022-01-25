@@ -6,16 +6,28 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   </head>
+
   <body>
     <a-scene>
         <a-assets>
             <img id="logo" src="logo.svg">
+            <img id="backhome" src="backhome.png">
+            <img id="vrexperience" src="vrexperience.png">
+            <img id="keyanddrag" src="keyanddrag.png">
+            <a-asset-item id="logo-3d" src="orbitallogo.gltf"></a-asset-item>
         </a-assets>
-
+        <a-entity camera look-controls wasd-controls position="0 1.6 0">
+            <a-image src="#backhome" position="-1.4 0.65 -1" width="0.25" height="0.19"></a-image>
+            <a-image src="#keyanddrag" position="-1.4 -0.6 -1" width="0.25" height="0.19"></a-image>
+            <a-image src="#vrexperience" position="1.4 0.63 -1" width="0.25" height="0.19"></a-image>
+        </a-entity>
         <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+
         <a-entity environment="preset:  arches;  dressingAmount:  0;  active:  true;  skyColor:  #babdb6; skyType: color; horizonColor:  #ffffff;  lightPosition:  [object Object];  ground:  flat;  groundTexture:  checkerboard;  groundColor:  #ffffff;  groundColor2:  #d3d7cf;  dressingColor:  #1c1e25;  dressingVariance:  [object Object]"</a-entity>
 
-        <a-image src="#logo" position="0 28 -60" width="50" height="17"></a-image>
+
+
+        <a-entity gltf-model="#logo-3d" position="-40 28 -85" rotation="90 0 0" scale="40 40 40" animation-mixer></a-entity>
 
         <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 8000;">
             <a-sphere radius="0.5" position="-20 4 0" color="#cfff00"></a-sphere>
@@ -75,4 +87,5 @@
 
     </a-scene>
   </body>
+
 </html>
