@@ -1,3 +1,3 @@
-# AFRAME playground
+# A-frame playground
 
-Here I have all my experiments and webpages using a-frame. 
+All my experiments using a-frame. 
